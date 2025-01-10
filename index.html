@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapy</title>
+
+    <link rel="stylesheet" href="./STYLES/Menu.css">
+    <link rel="stylesheet" href="./STYLES/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link rel="icon" href="./LOGOS/Logo.ico">
+</head>
+<body>
+
+	<!--========================== Contenedor oscuro ==========================-->
+
+	<div id="content_oscuro" class="content_oscuro">
+		<div id="content_cerrar" class="content_cerrar">
+			<button id="btn_cerrar" class="btn_cerrar">
+				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+					<path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"/>
+				</svg>
+			</button>    
+		</div>
+
+		<!--========================== Formulario uno ==========================-->
+	
+		<form id="formulario_uno" class="formulario_uno">
+			<div id="content_campos_iniciar_reserva" class="content_campos_iniciar_reserva">
+
+				<label for="salaSeleccionada">1. Selecciona una sala</label>
+				<select id="salaSeleccionada" name="salaSeleccionada" required>
+					<option value="">opción</option> <!-- Opción vacía para forzar selección -->
+					<option value="salaJuntas">Sala de Juntas</option>
+					<option value="salaCapacitaciones">Sala de Capacitaciones</option>
+					<option value="salaGerencias">Sala de Gerencias</option>
+					<option value="otrasala">Otro(a)</option>
+				</select>
+
+				<div id="content_nombre_sala_uno" class="content_nombre_sala_uno">
+					<label for="fecha">Nombre de Sala</label>
+					<div class="content_input">
+						<input type="text" id="nombre_sala_uno" name="nombre_sala_uno" placeholder="Sala de Estar" required>
+					</div>
+				</div>
+				
+				<div id="content_actividad_seleccionada" class="content_actividad_seleccionada">
+					<div class="content_actividad_seleccionada_uno">
+						<label for="actividadSeleccionada">2. Actividad</label>
+						<select id="actividadSeleccionada" name="actividadSeleccionada">
+							<option value="">opción</option> <!-- Opción vacía para forzar selección -->
+							<option value="Expres">Exprés</option>
+							<option value="Entrevistas">Entrevistas</option>
+							<option value="Capacitaciones">Capacitación</OPtion>
+							<option value="Reunion">Reunión</option>
+							<option value="Comité">Comité</option>
+							<option value="Facturacion">Facturación</option>
+							<option value="Induccion">Inducción</option>
+						</select>
+					</div>
+					
+
+					<div class="content_actividad_seleccionada_dos">
+						<label for="tiempoSeleccionado">3. Tiempo</label>
+						<select id="tiempoSeleccionado" name="tiempoSeleccionado">
+							<option value="">opción</option> <!-- Opción vacía para forzar selección -->
+							<option value="30minutos">30 minutos</option>
+							<option value="40minutos">40 minutos</option>
+							<option value="50minutos">50 minutos</option>
+							<option value="1hora">1 hora</option>
+							<option value="4horas">4 horas</option>
+							<option value="8horas">8 horas</option>
+							<option value="diaCompleto">Dia Completo</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="content_horarios">
+					<div class="content_horarios_uno">
+						<label for="hora_inicio">4. Hora Inicio de la actividad</label>
+						<div class="content_input">
+							<input type="time" id="hora_inicio" name="hora_inicio" required>
+						</div>
+					</div>
+					
+					<div class="content_horarios_dos">
+						<label for="hora_fin">5. Hora Fin de la actividad</label>
+						<div class="content_input">
+							<input type="time" id="hora_fin" name="hora_fin" required>
+						</div>
+					</div>
+				</div>
+				<div class="error_message" id="error_message"></div>
+				<div class="error_message" id="error_message"></div>
+
+				<label for="fecha">6. Fecha de Reserva</label>
+				<div class="content_input">
+					<input type="date" id="fecha" name="fecha" required>
+				</div>
+	
+				<label for="nombre">7. Nombre del Encargado</label>
+				<div class="content_input">
+					<input type="text" id="nombre" name="nombre" placeholder="Marcos David Salcedo" required>
+				</div>
+	
+				<div class="content_boton">
+					<button type="button" id="btn_reservar" class="btn_contenedor btn_reservar">
+						Reservar
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</form>
+
+		<!--========================== Formulario dos ==========================-->
+	
+		<form id="formulario_dos" class="formulario_dos">
+
+			<div id="content_campos_cancelar_reserva" class="content_campos_cancelar_reserva">
+
+				<div class="header">
+					<h1>Tapy</h1>
+					<p>Codigo de cancelación</p>
+				</div>
+
+				<div class="content_input_codigo">
+					<input type="password" id="digito1" class="digito" maxlength="1" pattern="\d">
+					<input type="password" id="digito2" class="digito" maxlength="1" pattern="\d">
+					<input type="password" id="digito3" class="digito" maxlength="1" pattern="\d">
+					<input type="password" id="digito4" class="digito" maxlength="1" pattern="\d">
+				</div>
+	
+				<div class="content_boton">
+					<button type="submit" id="btn_cancelar_reserva" class="btn_contenedor btn_cancelar_reserva">
+						Cancelar
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+						</svg>
+					</button>
+				</div>
+
+				<div id="resultado" style="text-align: center;"></div>
+
+				<div id="alertaconfirmacion" class="alertaconfirmacion">
+					<p>¿Estás seguro de cancelar la reserva?</p>
+					<div class="content_confirmacion">
+						<button id="btnConfirmar" class="btn_contenedor btn_confirmacion">Sí</button>
+						<button id="btnCancelar" class="btn_contenedor btn_confirmacion">No</button>
+					</div>
+				</div>
+
+			</div>
+		</form>
+
+		<form id="formulario_tres" class="formulario_tres">
+
+			<div id="content_campos_ver_reserva" class="content_campos_ver_reserva" aria-labelledby="formulario_tres">
+
+				<label for="salaSeleccionada">1. Selecciona una sala:</label>
+				<select id="salaSeleccionadauno" name="salaSeleccionadauno" required>
+					<option value="">opción</option> <!-- Opción vacía para forzar selección -->
+					<option value="salaJuntas">Sala de Juntas</option>
+					<option value="salaCapacitaciones">Sala de Capacitaciones</option>
+					<option value="salaGerencias">Sala de Gerencias</option>
+					<option value="otrasala">Otro(a)</option>
+				</select>
+
+				<label for="fecha">2. Fecha de Reserva</label>
+				<div class="content_input">
+					<input type="date" id="fecha_uno" name="fecha_uno" required>
+				</div>
+
+				<div id="content_nombre_sala_dos" class="content_nombre_sala_dos">
+					<label for="fecha">Nombre de Sala</label>
+					<div class="content_input">
+						<input type="text" id="nombre_sala_dos" name="nombre_sala_dos" placeholder="Sala de Estar" required>
+					</div>
+				</div>
+
+				<div id="content_consultar_reservas" class="content_consultar_reservas">
+					
+				</div>
+
+				<div class="content_ver">
+					<button type="button" id="btn_ver" class="btn_contenedor btn_ver">Consultar</button>
+				</div>
+			</div>
+
+		</form>
+	
+	</div>
+
+	<!--========================== Contenedor principal ==========================-->
+	
+	<div id="content_accion" class="content_accion">
+		<div class="header">
+			<h1>Tapy</h1>
+			<p>Contenido de registro de reservas</p>
+		</div>
+	
+		<label for="nombre">Seleccione algunas de estas opciones:</label>
+		<div class="content_input">
+			<button id="btn_iniciar_reservar" class="btn_contenedor btn_iniciar_reservar">Crear reserva</button>
+			<button id="btn_ver_reservas" class="btn_contenedor btn_ver_reservas">Consultar</button>
+			<button id="btn_cancelar_reserva_principal" class="btn_contenedor btn_cancelar_reserva">Cancelar reserva</button>
+		</div>
+	</div>
+
+    <script type="module" src="./SCRIPT-FRONTEND/index.js"></script>
+    <script type="module" src="./SCRIPT-BACKEND/Registrar_reservas.js"></script>
+	<script type="module" src="./SCRIPT-BACKEND/Eliminar_reservas.js"></script>
+	<script type="module" src="./SCRIPT-BACKEND/Consultar_reservas.js"></script>
+</body>
+</html>
